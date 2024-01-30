@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-  	<head>
-    	<title>A tiny, opensource, Bootstrap WYSIWYG rich text editor</title>	
-		</head>
-	
-	<body>
-		<div class="container">
-			<textarea name="content"></textarea>
-		</div>
-
-		<script src=""></script>
-		<script>
-            CKEDITOR.replace('content');
-        </script>
-	</body>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <title>CKEditor</title>
+                <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+        </head>
+        <body>
+                <div id="editor">This is some sample content.</div>
+                <script>
+                        ClassicEditor
+                                .create( document.querySelector( '#editor' ) )
+                                .then( editor => {
+                                        console.log( editor );
+                                } )
+                                .catch( error => {
+                                        console.error( error );
+                                } );
+                </script>
+        </body>
 </html>
